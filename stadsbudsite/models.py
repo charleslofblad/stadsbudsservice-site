@@ -1,18 +1,24 @@
 from django.db import models
-from django.db.models import permalink
+from django.utils import timezone
 from django.contrib.auth.models import User
-# For Django 1.9.3.
+#
 
 class Article(models.Model):
     user = models.ForeignKey(User)
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     body = models.TextField()
-    posted = models.DateTimeField(db_index=True, auto_now_add=True)
+    created_date = models.DateTimeField(default=timezone.now)
+    published_date = models.DateTimeField(blank=True, null=True)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.title
     
-    def __unicode__(self):
-        return '%s' % self.title
     
-    @permalink
-    def get_absolute_url(self):
-        return ('view_article_post', None, { 'slug': self.slug })
+    
+    
+    
