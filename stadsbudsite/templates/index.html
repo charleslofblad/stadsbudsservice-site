@@ -1,69 +1,14 @@
-<html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+<head>
+    <title>Stadsbudsservice index</title>
+   
+</head>
+<body>
     
-  <!--  <script src="js/hello.js"></script> -->
-  </head>
-  
-  <script>
-  // JavaScript Document
-
-angular.module('ionicApp', [])
-
-.controller('MainCtrl', function($scope, $http) {
- $http.get('/api/v1/products/').then(function(resp) {
+    
+    <h1>Lite text</h1>
  
-    $scope.conditions = resp.data.conditions;
-    console.log('Success', resp);
-    // For JSON responses, resp.data contains the result
-  }, function(err) {
-    console.error('ERR', err);
-    // err.status will contain the status code
-  })
-})
-  
-
-  </script>
-  
-  
-  
-<body ng-app="ionicApp" ng-controller="MainCtrl">
-The weather outside is 
-{% verbatim %} 
-{{id}}{{ean}}{{object}}{{products.id}}
-{% endverbatim %}
 
 
-
-  </body>
+      
+</body>
 </html>
-angular.module('ionicApp', [])
-
-.controller('MainCtrl', function($scope, $http) {
-  $http.get('http://echo.jsontest.com/conditions/frightful').then(function(resp) {
-    $scope.conditions = resp.data.conditions;
-  }, function(err) {
-    console.error('ERR', err);
-    // err.status will contain the status code
-  })
-});
-
-
-  angular.module('myApp.services').factory('Entry', function($resource) {
-  return $resource('/api/entries/:id'); // Note the full endpoint address
-});
-
-angular.module('myApp', ['ngResource']).
-factory('AngularIssues', function ($resource) {
-    return $resource('/api/v1/products/:number', {
-        number: '@number'
-    }, {
-        getIssue: {
-            method: 'GET',
-            params: {
-                number: 0
-            }
-        }
-    })
-}).
