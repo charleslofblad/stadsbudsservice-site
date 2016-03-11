@@ -6,17 +6,23 @@
         <div>
             <h1><a href="">Stadsbudsservice nyheter</a></h1>
         </div>
-{{ articles }}
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">En första nyhet</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">En andra nyhet</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+xxxxxxxxxxxxx
+{% for aticle in articles %}
+    <div>
+        <p>published: {{ aticle.published_date }}</p>
+        <h1><a href="">{{ aticle.title }}</a></h1>
+        <p>{{ aticle.body|linebreaks }}</p>
+        <p>{{ aticle.user }}</p>
+    </div>
+{% endfor %}
+xxxxxxxxxxxxx
+
     </body>
 </html>
+
+{{ articles }}
+
+{% for aticle in articles %}
+    {{ aticle }}
+{% endfor %}
