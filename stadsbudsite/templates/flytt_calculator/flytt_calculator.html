@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+      <title>Stadsbudservice</title>
+		
+   </head>
+   
+   
+       
+<!-- Main Content -->
+	<div id="content" class="section group">
+		<div id="main" class="col span_8_of_12">
+						<div id="post-893" class="post-893 page type-page status-publish hentry">
+				<h1 class="entry-title">STADSBUDSSERVICE - flytt - kalkylator</h1>
+				<div class="entry-content">
+												<form name="emailForm" method="post" target="_self">
+		
+
+				
+				<div class="mag_grid break-word-resp"> 
+                 <h4>Material</h4>
+                    <div class="mag_col">
+						Garderob<br />
+						<input type="text" name="grob">
+					</div>
+                    
+					<div class="mag_col">
+						Flyttlåda<br />
+						<input type="text" name="flyttlada">
+					</div>
+					
+
+
+	
+                    
+                    
+                    <div class="mag_col">&nbsp;</div>
+                    
+<hr noshade="" size="1">
+
+                    <h4>Transport</h4>
+                    
+					<div class="mag_col">
+						Liten lastbil 20 m3<br />
+						<input type="text" name="liten_lastbil">
+					</div>
+                    
+                    <div class="mag_col">
+						Stor lastbil 40 m3<br />
+						<input type="text" name="stor_lastbil">
+					</div>
+                    
+				    <div class="mag_col">
+						Transport i antal mil<br />
+						<input type="text" name="mil">
+					</div>
+                    
+					<div class="mag_col">&nbsp;</div>
+	
+				
+				<hr noshade="" size="1">
+				
+				<div class="section group">
+					<div class="col span_4_of_12">
+						<input name="button" onclick="this.form.total.value = findSum(this.form);" id="mag-order-button" type="button" value="Beräkna kostnad">
+					</div>
+					<div class="col span_4_of_12">
+						totalt: <input type="text" name="total" id="mag-order-output" value="0"> kr
+					</div>
+					<div class="col span_4_of_12">
+						<input type="reset" name="Reset" value="Nollställ" id="mag-reset-button">
+					</div>
+				</div>
+			</form>
+
+
+
+
+
+<script type="text/javascript"> Cufon.now(); </script>
+ <script language=JavaScript>
+
+
+<!-- //Begin
+
+function findSum(form) {
+
+var grob = form.grob.value;
+var flyttlada = form.flyttlada.value;
+var liten_lastbil = form.liten_lastbil.value;
+var stor_lastbil = form.stor_lastbil.value;
+var mil = form.mil.value;
+
+
+return ((grob * "300")+ (flyttlada * "35")+ (liten_lastbil * "600")+ (stor_lastbil * "800")+ (mil * "37"))
+}
+
+//  End -->
+</script>
+														</div>
+			</div>
+		</div>
+		
+
+<!-- Foot-header -->
+			
+			<!-- Footer -->
+			<div id="footer" class="section group">
+				
+			</div>
+			
+		</div>
+		
+	
+	</body>
+</html>

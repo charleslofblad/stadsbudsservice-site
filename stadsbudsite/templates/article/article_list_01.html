@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Stadsbudsservice nyheter</title>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css"> 
+     <!--   <link rel="stylesheet" href="{{ STATIC_URL }}css/custom.css"> -->
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Stadsbudsservice nyheter</a></h1>
+        </div>
+
+xxxxxxxxxxxxx
+{% for aticle in articles %}
+    <div>
+        <p>published: {{ aticle.published_date }}</p>
+        <h1><a href="">{{ aticle.title }}</a></h1>
+        <p>{{ aticle.body|linebreaks }}</p>
+        <p>{{ aticle.user }}</p>
+    </div>
+{% endfor %}
+xxxxxxxxxxxxx
+
+    </body>
+</html>
+
+{{ articles }}
+
+{% for aticle in articles %}
+    {{ aticle }}
+{% endfor %}

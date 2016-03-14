@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('stadsbudsite.urls')),
     url(r'^index/', TemplateView.as_view(template_name="index.html")),
-    
+    url(r'^flytt_calculator/', TemplateView.as_view(template_name="flytt_calculator/flytt_calculator.html")),
 ]
 
