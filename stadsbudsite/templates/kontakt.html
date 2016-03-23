@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+ <div class="content container">
+  
+    <hr>
+  <hr>
+  
+ <form>
+
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput">Namn</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Telefon</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label for="exampleInputEmail1">E-post</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+    <small class="text-muted">We'll never share your email with anyone else.</small>
+  </fieldset>
+
+
+  <fieldset class="form-group">
+    <label for="exampleTextarea">Example textarea</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </fieldset>
+  
+ 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  
+  
+  <hr>
+  <hr>
+  
+  
+  <div class="row">
+<div class="col-md-4">
+<address>
+  <strong>Vårt kontor</strong><br>
+  Bollstavägen 8<br>
+  122 41 Enskede<br>
+  <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+  <abbr title="Phone"></abbr> 020 15 04 04
+</address>
+
+<address>
+  <strong>E-post:</strong><br>
+  
+  <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+  <a href="mailto:#">info@stadsbudsservice.se</a>
+</address>
+</div>
+</div>
+  
+</div>  
+{% endblock %}
+
+Vårt kontor	
+Adress:
+Stadsbudsservice AB
+Bollstavägen 8
+122 41 Enskede
+020 15 04 04
+
+E-post: info@stadsbudsservice.se
+
+Org nummer: 556930-4610
