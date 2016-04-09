@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^index/', TemplateView.as_view(template_name="index.html")),
     url(r'^flytt_calculator/', TemplateView.as_view(template_name="flytt_calculator/flytt_calculator.html")),
     url(r'^kontakt/', TemplateView.as_view(template_name="kontakt.html")),
+    url(r'^komponenter/', TemplateView.as_view(template_name="komponenter.html")),
 ]
 

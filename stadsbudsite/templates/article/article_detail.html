@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="article">
-        {% if article.published_date %}
-            <div class="date">xxxxxxxxxxxxxxxxxxxxxxx
-                {{ article.published_date }}
-            </div>
-        {% endif %}
-        <h1>{{ article.title }}</h1>
-        <p>{{ article.body|linebreaks }}</p>
-    </div>
+ <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+  
+        <div class="blog-post">
+            <h1 class="blog-post-title">{{ article.title }}</h1>
+            
+            {% if article.published_date %}
+            <p class="blog-post-meta">x{{ article.published_date }}<a href="#">{{ article.user }}</a></p>
+            {% endif %}
+
+            <p>{{ article.body|linebreaks }}</p>
+            
+            <hr>
+       </div>
+    
+    </div></div></div>
+    
 {% endblock %}

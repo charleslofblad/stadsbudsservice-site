@@ -8,17 +8,21 @@
         <div class="col-md-8">
 	{% for article in articles %}
                 <div class="article">
-                    <div class="date">
-                        <p>published: {{ article.published_date }}</p>
-                    </div>
+                    
                     
                     	
                         <h1><a href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a></h1>
+                       
                         
                     
                     <p>{{ article.body|linebreaks }}</p>
-
-                    <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span>{{ article.user }}</p>
+                    
+                    <div class="date">
+                        <p>{{ article.published_date }}</p><p><span class="glyphicon glyphicon-user" aria-hidden="true"></span>{{ article.user }}</p>
+                    </div>
+                    
+                    
+                    
                 </div>
 	{% endfor %}
         </div>
